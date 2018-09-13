@@ -1,0 +1,117 @@
+/* pages/index/index.wxss */
+.slide-image{
+  width: 100%;
+  height: 800rpx;
+}
+.content-view{
+  clear: left;
+  width: 90%;
+  margin: 10rpx auto;
+}
+.item-view{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  float: left;
+  width: 33.33%;
+}
+.item-view-hover{
+  background-color: #d4237a
+}
+.item-view-hover text{
+  color: #FFF;
+}
+.item-view-hover image{
+  color: #FFF;
+}
+.item-view image{
+  margin-top: 10px;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.item-text{
+  margin-bottom: 10px;
+  font-size: 12pt;
+}
+.hr{
+  clear: left;
+  width: 90%;
+  margin: 10rpx auto;
+  height: 8rpx;
+  background-color: #d4237a;
+  border-radius: 4px;
+}
+.head{
+  background-color: #eee;
+  padding: 15rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position:relative;
+}
+.head image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.head text{
+  border-left: 2px solid #FFF;
+  margin-left:5px;
+  padding-left: 5px; 
+}
+.body{
+  margin: 5rpx 0;
+  clear: left;
+}
+.body view{
+  float: left;
+  text-align: center;
+  width: 50%;
+  margin: 10rpx 0;
+}
+.body view image{
+  width: 95%;
+  height: 280rpx;
+}
+.head .search{
+  position: absolute;
+  right: 15rpx;
+}
+.search .search2{
+  display: none;
+}
+.search-hover .search2{
+ display: block;
+}
+.search-hover .search1{
+  display: none;
+}
+.body-item{
+  position:relative;
+  box-shadow: 10rpx 10rpx 5rpx #eee;
+}
+.body-item image{
+  transition: all 350ms;
+  transform:scale(1);
+}
+.body-item-hover image{
+ transform:scale(1.1);
+}
+.body-item-text{
+  background-color: #E9C342;
+  border-radius: 0 5rpx 5rpx 5rpx;
+  color: #FFF;
+  font-size: 8pt;
+  padding: 0 8rpx;
+  position: absolute;
+  top: 0;
+  left: 10rpx;
+  z-index: 999;
+}
+.bottom{
+  background-color: #eee;
+  clear: left;
+  font-size: 10pt;
+  color: #999;
+  text-align: center;
+}

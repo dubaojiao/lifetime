@@ -1,0 +1,54 @@
+/* pages/index/search/search.wxss */
+.section{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 12pt;
+  margin: 30rpx;
+}
+.picker{
+  font-size: 10pt;
+  border-bottom: 1px solid #999;
+}
+.search{
+  margin: 0 auto;
+  width: 80%;
+  padding-top: 60rpx;
+  border-left: 4px solid #d4237a;
+  border-bottom: 4px solid #d4237a;
+  border-right: 4px solid #d4237a;
+  border-radius: 0 0 10rpx 10rpx;
+}
+.pickerSwitch{
+  font-size: 10pt;
+  transform:scale(.7)
+}
+.btn{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.img{
+  display: block;
+  width: 70rpx;
+  height: 70rpx;
+  transform: translateY(-10rpx)
+}
+.imgx{
+  transform: translateY(-40rpx)
+}
+.imgxx{
+  transform: translateY(-68rpx)
+}
+/** 修改button默认的点击态样式类**/
+.button-hover {
+  background-color: red;
+}
+/** 添加自定义button点击态样式类**/
+.other-button-hover {
+  background-color: blue;
+}
+.btn-b{
+  padding: 0 20rpx;
+}

@@ -1,0 +1,62 @@
+/* pages/bus/bus.wxss */ 
+.swiper-tab{  
+    width: 100%;  
+    border-bottom: 2rpx solid #777777;  
+    text-align: center;  
+    line-height: 80rpx;}  
+.swiper-tab-list{  font-size: 30rpx;  
+    display: inline-block;  
+    width: 33.33%;  
+    color: #777777;  
+}  
+.on{ color: #d4237a;  
+    border-bottom: 5rpx solid #d4237a;}  
+  
+.swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden; }  
+.swiper-box view{  
+    text-align: left;  
+}
+
+.head{
+  width: 40%;
+  position: absolute;
+  left: 0;
+  bottom:0;
+}
+.head .show{
+  background-color: #eee;
+  padding: 15rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 0 20rpx 20rpx 0;
+}
+.head .show image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.head .show text{
+  border-left: 2px solid #FFF;
+  margin-left:5px;
+  padding-left: 5px; 
+}
+.scroll-view-item{
+  height: 100%;
+  border: 2rpx solid #d4237a;
+}
+.head .show .selectImg{
+  position: absolute;
+  right: 15rpx;
+}
+.selectItem{
+  width: 90%;
+  margin: 0 auto;
+  text-align:  center;
+}
+.selectItem .item{
+  padding: 20rpx 0;
+  border-bottom:1rpx solid #FF8B8B;
+}
+.selectItemHover{
+  background-color: #eee;
+}

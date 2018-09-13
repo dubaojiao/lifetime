@@ -1,0 +1,21 @@
+
+<view class="swiper-tab">  
+    <view style='width:{{width}}%' wx:for="{{sons}}" wx:for-item="item" wx:for-index="id" class="swiper-tab-list {{currentTab==id ? 'on' : ''}}" data-current="{{id}}" bindtap="swichNav">{{item.name}}</view>
+</view>  
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight-46}}px" bindchange="bindChange">  
+    <swiper-item wx:for="{{sons}}" wx:for-item="item" wx:for-index="id">  
+      <scroll-view scroll-y style="height: 100%"  scroll-into-view="{{toView}}" scroll-with-animation scroll-top="{{scrollTop}}" enable-back-to-top='true'>
+        <view  wx:for="{{educations}}" wx:for-item="item" wx:for-index="id" id="green_{{id}}" class="scroll-view-item bc_green"></view>
+    </scroll-view>
+    </swiper-item>
+</swiper>  
+<view class='head'>
+  <view  class='selectItem' wx:if='{{selectIsShow}}'>
+    <view bindtap='selectItem' data-id='{{id}}' hover-class='selectItemHover' class='item' wx:for='{{educations}}' wx:for-item="item" wx:for-index="id">{{item.name}}</view>
+  </view>
+  <view class='show' bindtap='bindSelect'>
+    <image src="../../images/introduce.png"></image>
+    <text>{{select.name}}</text>
+    <image class='selectImg' src="../../images/select.png"></image>
+  </view>
+</view>

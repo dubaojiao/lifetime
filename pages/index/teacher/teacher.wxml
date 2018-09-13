@@ -1,0 +1,41 @@
+<image src="../../../images/5ef3b39e1ca943021f5727ea665b20d9.png"></image>
+<view>
+  <view class='item-view'>
+  <image src="../../../images/name.png"></image>
+  <text class='item-text1'>名称</text>
+  <text class='item-text2'>{{item.name}}</text>
+  </view>
+  <view class='hr'></view>
+  <view class='item-view'>
+  <image src="../../../images/xl.png"></image>
+  <text class='item-text1'>学历</text>
+  <text class='item-text2'>{{item.education}}</text>
+  </view>
+  <view class='hr'></view>
+  <view class='item-view'>
+  <image src="../../../images/zhuangye.png"></image>
+  <text class='item-text1'>专业</text>
+  <text class='item-text2'>{{item.type}}</text>
+  </view>
+  <view class='hr'></view>
+  <view class='item-view'>
+  <image src="../../../images/tec.png"></image>
+  <text class='item-text1'>特长</text>
+  <text class='item-text2'>{{item.region}}</text>
+  </view>
+  <view class='hr'></view>
+  <view class=' item-view item-view-head'>
+  <image src="../../../images/introduce.png" style='width:30rpx;height:30rpx;'></image>
+  <text style='font-size: 12pt;'>自我介绍</text>
+  </view>
+  <text class='item-text2' style='margin: 10rpx 20rpx;'>{{item.introduce}}</text>
+  <view class=' item-view item-view-head'>
+  <image src="../../../images/buzhou.png" style='width:30rpx;height:30rpx;'></image>
+  <text class='item-text1'>荣誉/工作</text>
+  </view>
+  <view>
+    <view class='item-view' wx:for="{{item.history}}">
+    <image src="../../../images/you.png" style='width:30rpx;height:30rpx;'></image>
+    <text class='item-text1 min'>{{item}}</text></view>
+  </view>
+</view>

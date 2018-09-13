@@ -1,0 +1,43 @@
+<!--pages/index/index.wxml-->
+<view class='index-view'>
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+</view>
+<!--
+<view>
+  <view class='left-view content'>
+    <view class="contentItem" wx:for="{{[1,2,3,6,5,4]}}" wx:for-index="idx" wx:for-item="itemName" style='background-color:{{idx==0?"#fff":""}}'>
+      <image bindtap="bindViewTap" class="userinfo-avatar-content" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+  </view>
+  <view class='right-view content'>
+  </view>
+</view>
+-->
+<!-- <view class="section section_gap">
+  <scroll-view class="scroll-view_H" scroll-x style="width: 100%" bindscroll='bindScroll'>
+    <view id="green" class="scroll-view-item_H bc_green" style='width:{{width}}'>
+      <view animation="{{animationData}}" class="contentItem" wx:for="{{[1,2,3,6,5,4]}}" wx:for-index="idx" wx:for-item="itemName" style='background-color:{{idx==0?"#fff":""}};width:{{widthItem}}'>
+      <image bindtap="bindViewTap" class="userinfo-avatar-content" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+    </view>
+    <view id="red"  class="scroll-view-item_H bc_red"></view>
+  </scroll-view>
+</view> -->
+<view class="scroll-view_H" >
+  <view class='left-view content'style='width:{{leftWidth}}'  >
+      <view bindtap='scrollLarge' class="contentItem" wx:for="{{[1,2,3,6,5,4]}}" wx:for-index="idx" wx:for-item="itemName" style='background-color:{{idx==0?"#fff":""}}'>
+        <view  class="userinfo-avatar-content" >
+          幼儿园
+        </view>
+      
+      </view>
+  </view>
+  <view class='right-view content' style='width:{{rightWidth}}' bindtap='scrollTap' >
+  </view>
+</view> 

@@ -1,0 +1,80 @@
+<view class="section">
+  <movable-area style="height: 1000rpx;width: 100%;">
+    <movable-view class='type' x="{{x}}" y="{{y}}" direction="all" wx:if='{{isShowMovable}}'>
+        <view bindtap='itemTap' data-id='{{id}}'  class='{{id==checkedIndex?"li-activit":""}}' wx:for="{{items}}" wx:for-item="item" wx:for-index="id">
+          <image src="{{item.icon}}"></image>
+          <text class='item-text'>{{item.name}}</text>
+        </view>
+    </movable-view>
+    <!--通过openId 获取此人孩子是否已经上学  如果上线 提供学习数据，如果没有上线推荐当前类型下的学校  -->
+    <view class="swiper-tab" wx:if='{{isShow}}'>  
+      <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">哈哈</view>  
+      <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">呵呵</view>  
+      <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">嘿嘿</view>  
+      <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">嗷嗷</view>  
+      <view class="swiper-tab-list {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav">嗷嗷</view>  
+    </view>  
+    <swiper wx:if='{{isShow}}' current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange"> 
+        <!-- 我是哈哈 -->  
+        <swiper-item>  
+          <view>我是哈哈</view>  
+        </swiper-item>  
+        <!-- 我是呵呵 -->  
+        <swiper-item>  
+          <view>我是呵呵</view>  
+        </swiper-item>  
+        <!-- 我是嘿嘿 -->  
+        <swiper-item>  
+          <view>我是嘿嘿</view>  
+        </swiper-item>  
+        <swiper-item>  
+          <view>我是嗷嗷</view>  
+        </swiper-item>  
+        <swiper-item>  
+          <view>我是嗷嗷</view>  
+        </swiper-item>  
+    </swiper>
+    <view wx:if='{{!isShow}}' >
+      <view class='warning-view'>
+        <view class='warning-msg'>
+        <image class='warning'  src="../../../images/warning.png"></image>
+        <text class='warning-text'>暂无子女信息请点击添加</text>
+        </view>
+        <view bindtap='addSon' class='warning-btn' hover-class='warning-btn-hover'>
+        <image class='warning-img btn1'  src="../../../images/addUser.png"></image>
+        <image class='warning-img btn2'  src="../../../images/addUserChecked.png"></image>
+        </view>
+      </view>
+    </view>
+  </movable-area>
+</view>
+<view wx:if="{{addShow}}"  class='model' style="width:100%">
+  <view class='model-content' animation="{{animationData}}">
+    <view class='model-head'>子女信息添加</view>
+    <view class="section">
+      <image class='warning-img'  src="../../../images/sonName.png"></image>
+      <input placeholder="姓名" auto-focus value='{{son.name}}' bindinput='nameInput'/>
+    </view>
+    <view class="section">
+      <image class='warning-img'  src="../../../images/sonPhone.png"></image>
+      <input placeholder="电话" value='{{son.phone}}' bindinput='phoneInput'/>
+    </view>
+    <view class="section">
+      <image class='warning-img'  src="../../../images/sonCart.png"></image>
+      <input placeholder="身份证" value='{{son.cart}}' bindinput='cartInput'/>
+    </view>
+    <view class="section">
+      <image class='warning-img'  src="../../../images/sonGender.png"></image>
+      <radio-group class="radio-group" bindchange="radioChange">
+        <label class="radio" wx:for="{{genders}}" ><!--checked="{{item.checked}}"-->
+          <radio value="{{item.id}}" />{{item.name}}
+        </label>
+      </radio-group>
+      
+    </view>
+    <view class="section">
+      <button class='btn' bindtap='off' type="default"> 取消 </button>
+      <button class='btn' bindtap='addbtn' type="primary"> 确定 </button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,109 @@
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-dots="{{indicatorDots}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item class="swiperItem">
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<view>
+  <view class='item-view'>
+  <image src="../../../images/schoolName.png"></image>
+  <text class='item-text1'>学校名称</text>
+  <text class='item-text2'>{{item.name}}</text>
+  </view>
+  <view class='hr'></view>
+  <view class='item-view'>
+  <image src="../../../images/xl.png"></image>
+  <text class='item-text1'>最高学历</text>
+  <text class='item-text2'>{{item.education}}</text>
+  </view>
+  <view class='hr'></view>
+  <view class='item-view'>
+  <image src="../../../images/type.png"></image>
+  <text class='item-text1'>学校类型</text>
+  <text class='item-text2'>{{item.type}}</text>
+  </view>
+  <view class='hr'></view>
+  <view class='item-view'>
+  <image src="../../../images/region.png"></image>
+  <text class='item-text1'>所属地区</text>
+  <text class='item-text2'>{{item.region}}</text>
+  </view>
+  <view class='hr'></view>
+  <view class='item-view'>
+  <image src="../../../images/address.png"></image>
+  <text class='item-text1'>学校地址</text>
+  <text class='item-text2'>{{item.address}}</text>
+  </view>
+  <view class='hr'></view>
+  <view class='item-view'>
+  <image src="../../../images/attr.png"></image>
+  <text class='item-text1'>学校属性</text>
+  <text class='item-text2'>{{item.attr}}</text>
+  </view>
+  <view class='hr'></view>
+  <view class='item-view'>
+  <image src="../../../images/size.png"></image>
+  <text class='item-text1'>学校占地</text>
+  <text class='item-text2'>{{item.size}}</text>
+  </view>
+  <view class='hr'></view>
+  <view class='item-view'>
+  <image src="../../../images/createdTime.png"></image>
+  <text class='item-text1'>创办时间</text>
+  <text class='item-text2'>{{item.createdTime}}</text>
+  </view>
+  <view class='hr'></view>
+  <view class='item-view item-view-head'>
+  <image src="../../../images/zhuangye.png" style='width:30rpx;height:30rpx;'></image>
+  <text class='item-text1'>开设专业</text>
+  </view>
+  <view >
+    <view class='zy-class' wx:for="{{item.major}}">{{item}}</view>
+  </view>
+  <view class=' item-view item-view-head'>
+  <image src="../../../images/introduce.png" style='width:30rpx;height:30rpx;'></image>
+  <text style='font-size: 12pt;'>学校介绍</text>
+  </view>
+  <text class='item-text2' style='margin: 10rpx 20rpx;'>{{item.introduce}}</text>
+  <view class=' item-view item-view-head'>
+  <image src="../../../images/buzhou.png" style='width:30rpx;height:30rpx;'></image>
+  <text class='item-text1'>历史沿革</text>
+  </view>
+  <view>
+    <view class='item-view' wx:for="{{item.history}}">
+    <image src="../../../images/you.png" style='width:30rpx;height:30rpx;'></image>
+    <text class='item-text1 min'>{{item}}</text></view>
+  </view>
+</view>
+<!--名师/评论-->  
+<view class="swiper-tab">  
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">名师</view>  
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">评论</view> 
+</view>  
+  
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
+    <!-- 我是哈哈 -->  
+    <swiper-item>  
+      <view>
+        <view wx:for="{{imgUrls}}" wx:for-index="id" data-id='{{id}}' hover-class='body-item-hover' class='body-item' bindtap='teacherTap'>
+      <image src="{{item}}" ></image>
+      <text>赵四</text>
+    </view>
+      </view>  
+    </swiper-item>  
+    <!-- 我是呵呵 -->  
+    <swiper-item>  
+      <view class='comment-view view-border' wx:for='{{comment}}' wx:for-item="item" wx:for-index="id">
+        <view class='item-view '>
+        <text class='comment-text'>{{item.name}}</text>
+        <text class='comment-text rigth'>{{item.time}}</text>
+        </view>
+        <view class='hr hhr'></view>
+        <view class='comment-content'>
+          {{item.content}}
+        </view>
+      </view>  
+    </swiper-item>
+</swiper>  

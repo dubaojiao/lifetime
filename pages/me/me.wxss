@@ -1,0 +1,54 @@
+/* pages/index/index.wxss */
+.index-view{
+  /* background: linear-gradient(#fff, #1963ce);  标准的语法（必须放在最后）  */
+  background-color:  #1963ce;
+  height: 350rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  margin-top: 100rpx;
+  border-radius: 50%;
+}
+.content{
+  float: left;
+  height: auto;
+  background-color: #1963ce
+}
+.contentItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #fefefe;
+}
+.left-view{
+}
+.right-view{
+  height: 800rpx;
+  background-color: #fff
+}
+.userinfo-avatar-content{
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+/* content */
+.scroll-view-item_H{
+  display: inline-block;
+}
+.bc_green{
+  width: 30%;
+  background-color: #09BB07
+}
+.bc_red{
+  width: 90%;
+  background-color: red
+}
+.scroll-view_H{
+  white-space: nowrap;
+  background-color: #09BB07
+}

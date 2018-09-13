@@ -1,0 +1,37 @@
+ <view>
+  <view class='search' wx:if="{{isShow}}">
+    <view class="section" style='margin-top:0'>
+      <view class="section__title">省市区选择：</view>
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+          {{region[0]}}，{{region[1]}}，{{region[2]}}
+        </view>
+      </picker>
+    </view>
+    <view class="section">
+      <view class="section__title">学校类型选择：</view>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          {{array[index]}}
+        </view>
+      </picker>
+    </view>
+    <view class="section">
+      <view class="section__title">是否之显示名校：</view>
+      <switch checked bindchange="switch1Change" class='pickerSwitch'/>
+    </view>
+    <view class="section">
+      <view class="section__title">学校名查询：</view>
+      <input placeholder="请输入学校名称" auto-focus/>
+    </view>
+    <view class="section">
+      <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="primary" class='btn-b'> 查询 </button>
+    </view>
+  </view>
+  <view class='btn' bindtap='showSearch'>
+    <image wx:if="{{isShow}}" class="{{isShow?'img':''}}"  src="../../../images/s.png"></image>
+    <image class='{{isShow?"img imgx":"img"}}'  src="../../../images/j.png"></image>
+    <image wx:if="{{!isShow}}" class='{{isShow?"img imgxx":"img imgx"}}'  src="../../../images/x.png"></image>
+  </view>
+</view>

@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/me/me",
+    "pages/bus/bus",
+    "pages/cost/cost",
+    "pages/index/item/item",
+    "pages/index/search/search",
+    "pages/index/school/school",
+    "pages/index/teacher/teacher",
+    "pages/me/add/add"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "江湖",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#ccc",
+    "selectedColor": "#35495e",
+    "borderStyle": "white",
+    "backgroundColor": "#f9f9f9",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-actived.png"
+      },
+      {
+        "text": "成绩",
+        "pagePath": "pages/bus/bus",
+        "iconPath": "images/bus.png",
+        "selectedIconPath": "images/bus-actived.png"
+      },
+      {
+        "text": "费用",
+        "pagePath": "pages/cost/cost",
+        "iconPath": "images/cost.png",
+        "selectedIconPath": "images/cost-actived.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/me/me",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user-actived.png"
+      }
+    ]
+  }
+}

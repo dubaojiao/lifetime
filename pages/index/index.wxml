@@ -1,0 +1,46 @@
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-dots="{{indicatorDots}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item class="swiperItem">
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class='hr'></view>
+<view class='content-view'>
+  <view data-id='{{id}}' bindtap='itemTap' hover-class='item-view-hover' class='item-view' wx:for="{{items}}" wx:for-item="item" wx:for-index="id">
+  <image src="{{item.icon}}"></image>
+  <text class='item-text'>{{item.name}}</text>
+  </view>
+</view>
+<view class='hr'></view>
+<view class='school-view content-view'>
+  <view class='head'>
+    <image src="../../images/mSchool.png"></image>
+    <text>名校名师</text>
+    <view class='search' bindtap='searchTap'  hover-class='search-hover'>
+    <image class='search1'  src="../../images/search1.png"></image>
+    <image class='search2'  src="../../images/search2.png"></image>
+  </view>
+  </view>
+  <view class='body'>
+    <view wx:for="{{imgUrls}}" wx:for-index="id" data-id='{{id}}' hover-class='body-item-hover' class='body-item' bindtap='schoolTap'>
+      <text class='body-item-text'>小学</text>
+      <image src="{{item}}" ></image>
+      <text>ccccc</text>
+    </view>
+    <view wx:for="{{imgUrls}}" hover-class='body-item-hover' class='body-item'>
+      <text class='body-item-text'>小学</text>
+      <image src="{{item}}" ></image>
+      <text>ccccc</text>
+    </view>
+    <view wx:for="{{imgUrls}}" hover-class='body-item-hover' class='body-item'>
+      <text class='body-item-text'>小学</text>
+      <image src="{{item}}" ></image>
+      <text>ccccc</text>
+    </view>
+  </view>
+</view>
+<view class='bottom'>
+  
+</view>
